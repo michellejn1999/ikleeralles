@@ -1,0 +1,137 @@
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+
+html {
+    background-image: url(scherm1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    float: left;
+}
+
+
+body {
+    font-family: montserrat, arial, verdana;
+}
+
+#msform {
+
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 58% 10% 0% 0%;
+    position: relative;
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+#msform input,
+#msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+#msform .action-button {
+    width: 100px;
+    background-color: #FB7333;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    border-radius: 4px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #FB7333;
+}
+
+.fs-title {
+    font-size: 21px;
+    color: #000;
+}
+
+#plaatje{
+    width: 80%;
+    height: auto;
+}
+p {
+    font-size: 13px;
+    color: #000;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 10px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#progressbar {
+    padding-left: 49px;
+    overflow: hidden;
+    counter-reset: step;
+    margin: -8% 11% 0;
+    position: relative;
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: #b2b2b2;
+    font-size: 9px;
+    width: 33px;
+    float: left;
+    position: relative;
+}
+
+#progressbar li:before {
+    content: counter(step);
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    background: #b2b2b2;
+    border-radius: 10px;
+    margin: 0 auto 5px auto;
+}
+
+#progressbar li:after {
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #FB7333;
+    color: #FB7333;
+}
